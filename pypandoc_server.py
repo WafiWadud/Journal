@@ -1,8 +1,4 @@
-from __future__ import annotations
-from typing import TYPE_CHECKING
-
-if TYPE_CHECKING:
-    from _typeshed import FileDescriptorOrPath
+from typing import Any
 from flask import Flask, Response
 from glob import glob
 from pypandoc import convert_file
@@ -19,7 +15,7 @@ for filename in glob("*.md"):
 
 
 @app.route("/<path:filename>")
-def serve_html(filename: FileDescriptorOrPath) -> Response:
+def serve_html(filename: Any) -> Response:
     # Check if the requested file exists in our stored HTML files
     if filename in html_files:
         return Response(html_files[filename], mimetype="text/html")
