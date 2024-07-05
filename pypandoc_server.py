@@ -1,9 +1,15 @@
+from __future__ import annotations
+from typing import TYPE_CHECKING
+
+if TYPE_CHECKING:
+    from _typeshed import FileDescriptorOrPath
 from flask import Flask, Response
 from glob import glob
 from pypandoc import convert_file
+from typing import Dict
 
-app = Flask(__name__)
-html_files = {}
+app: Flask = Flask(__name__)
+html_files: Dict = {}
 
 # Convert all Markdown files to HTML and store them in memory
 for filename in glob("*.md"):
@@ -13,13 +19,13 @@ for filename in glob("*.md"):
 
 
 @app.route("/<path:filename>")
-def serve_html(filename):
+def serve_html(filename: FileDescriptorOrPath) -> Response:
     # Check if the requested file exists in our stored HTML files
     if filename in html_files:
         return Response(html_files[filename], mimetype="text/html")
-    elif filename.endswith(".css"):
+    elif str(filename).endswith(".css"):
         return Response(open(filename, "r").read(), mimetype="text/css")
-    elif filename.endswith(".js"):
+    elif str(filename).endswith(".js"):
         return Response(open(filename, "r").read(), mimetype="text/javascript")
     else:
         return Response(open(filename, "rb").read(), mimetype="image")
