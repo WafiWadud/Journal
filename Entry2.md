@@ -1,3 +1,8 @@
+<style>
+.red {
+  color: red;
+}
+</style>
 <link rel="stylesheet" href="index.css">
 
 # Styling in (pandoc) Markdown {#gradient}
@@ -18,6 +23,6 @@ This text is red {.red}
 
 This will output:
 
-This text is red {color: red;}
+This text is red {.red}
 
 [Previous Page](Entry1.md) [NEXT Page](Entry3.md)
