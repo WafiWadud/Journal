@@ -1,10 +1,3 @@
-<style>
-.red {
-  color: red;
-}
-</style>
-<link rel="stylesheet" href="index.css">
-
 # Styling in (pandoc) Markdown {#gradient}
 
 ---
@@ -24,6 +17,12 @@ This text is red {.red}
 ```
 
 This will output:
+
+<style>
+.red {
+  color: red;
+}
+</style>
 
 [This text is red]{.red}
 

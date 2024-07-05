@@ -1,5 +1,3 @@
-<link rel="stylesheet" href="index.css">
-
 # Hello, World! {#gradient}
 
 ---

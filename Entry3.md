@@ -1,5 +1,3 @@
-<link rel="stylesheet" href="index.css">
-
 # Finding files ending in a certain extension (python) {#gradient}
 
 ---
