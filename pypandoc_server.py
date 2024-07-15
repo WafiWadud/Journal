@@ -34,4 +34,4 @@ async def serve_file(filename: str):
 
 
 if __name__ == "__main__":
-    uvicorn.run(app, host="127.0.0.1", port=80, loop="uvloop")
+    uvicorn.run(app, host="127.0.0.1", port=10000, loop="uvloop")
