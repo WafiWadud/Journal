@@ -1,11 +1,17 @@
-from typing import Any
-from flask import Flask, Response
+from typing import Dict
+from fastapi import FastAPI
+from fastapi.responses import HTMLResponse, FileResponse
 from glob import glob
 from pypandoc import convert_file
-from typing import Dict
+import uvicorn
+import uvloop
+import asyncio
 
-app: Flask = Flask(__name__)
-html_files: Dict = {}
+# Set uvloop as the event loop policy
+asyncio.set_event_loop_policy(uvloop.EventLoopPolicy())
+
+app = FastAPI()
+html_files: Dict[str, str] = {}
 
 # Convert all Markdown files to HTML and store them in memory
 for filename in glob("*.md"):
@@ -17,17 +23,15 @@ for filename in glob("*.md"):
     )
 
 
-@app.route("/<path:filename>")
-def serve_html(filename: Any) -> Response:
-    # Check if the requested file exists in our stored HTML files
+@app.get("/{filename:path}")
+async def serve_file(filename: str):
     if filename in html_files:
-        return Response(html_files[filename], mimetype="text/html")
-    elif str(filename).endswith(".css"):
-        return Response(open(filename, "r").read(), mimetype="text/css")
-    elif str(filename).endswith(".js"):
-        return Response(open(filename, "r").read(), mimetype="text/javascript")
+        return HTMLResponse(content=html_files[filename])
+    elif filename.endswith((".css", ".js")):
+        return FileResponse(filename)
     else:
-        return Response(open(filename, "rb").read(), mimetype="image")
+        return FileResponse(filename)
 
 
-app.run(debug=False, port=80, host="0.0.0.0")
+if __name__ == "__main__":
+    uvicorn.run(app, host="0.0.0.0", port=80, loop="uvloop")
