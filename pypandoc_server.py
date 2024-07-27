@@ -1,14 +1,15 @@
-from typing import Dict
-from fastapi import FastAPI
-from fastapi.responses import HTMLResponse, FileResponse
+from asyncio import set_event_loop_policy
 from glob import glob
+from typing import Dict
+
+from fastapi import FastAPI
+from fastapi.responses import FileResponse, HTMLResponse
 from pypandoc import convert_file
-import uvicorn
-import uvloop
-import asyncio
+from uvicorn import run
+from uvloop import EventLoopPolicy
 
 # Set uvloop as the event loop policy
-asyncio.set_event_loop_policy(uvloop.EventLoopPolicy())
+set_event_loop_policy(EventLoopPolicy())
 
 app = FastAPI()
 html_files: Dict[str, str] = {}
@@ -33,4 +34,4 @@ async def serve_file(filename: str):
         return FileResponse(filename)
 
 
-uvicorn.run(app, host="0.0.0.0", port=80, loop="uvloop")
+run(app, host="0.0.0.0", port=80, loop="uvloop")
