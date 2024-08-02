@@ -22,7 +22,7 @@ async def serve_file(filename: str):
             )
         else:
             return FileResponse(path=filename)
-    except RuntimeError:
+    except (RuntimeError, FileNotFoundError):
         return FileResponse(path="404.html")
 
 
