@@ -2,7 +2,7 @@
 
 ---
 
-The old `<marquee>` tag has practically been eradicated from most browsers. Instead the user should use CSS3 animation. So, i did just that in a small script anyone can embed. To create a marquee, use the `<mq>` tag with this in your code:
+The old `<marquee>` tag has practically been eradicated from most browsers. Instead the user should use CSS3 animation. So, i did just that in a small script anyone can embed. To create a marquee, use the `<new-marquee>` tag with this in your code:
 
 ```js
 class MarqueeElement extends HTMLSpanElement {
@@ -20,6 +20,7 @@ class MarqueeElement extends HTMLSpanElement {
     const style = document.createElement("style");
     style.textContent = `
       :host {
+        width: 100%;
         display: inline-block;
         line-height: 50px;
         white-space: nowrap;
@@ -44,7 +45,7 @@ class MarqueeElement extends HTMLSpanElement {
 }
 
 // Define the custom element
-customElements.define("mq", MarqueeElement, { extends: "span" });
+customElements.define("new-marquee", MarqueeElement, { extends: "span" });
 ```
 
 [Previous Page](Entry5.md) [Next Page](Entry7.md)
