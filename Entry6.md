@@ -46,3 +46,5 @@ class MarqueeElement extends HTMLSpanElement {
 // Define the custom element
 customElements.define("mq", MarqueeElement, { extends: "span" });
 ```
+
+[Previous Page](Entry5.md) [Next Page](Entry7.md)
