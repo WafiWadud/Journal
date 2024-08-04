@@ -1,13 +1,13 @@
 @import url("https://fonts.googleapis.com/css2?family=Playwrite+US+Modern:wght@100..400&display=swap");
 
 h1 {
-  font-size: 72pt;
+  font-size: 8rem;
   text-align: center;
 }
 
 html {
   font-family: "Playwrite US Modern";
-  font-size: 24pt;
+  font-size: 2.667rem;
 }
 
 #gradient {
