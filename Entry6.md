@@ -1,4 +1,4 @@
-# A new, Better marquee tag
+# A new, Better marquee tag {#gradient}
 
 ---
 
