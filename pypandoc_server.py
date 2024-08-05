@@ -14,7 +14,7 @@ app: FastAPI = FastAPI()
 
 
 @app.get("/{filename:path}")
-async def serve_file(filename: str):
+async def serve_file(filename: str) -> HTMLResponse | FileResponse:
     if not exists(filename):
         return FileResponse(path="404.html")
     if filename.endswith(".md"):
