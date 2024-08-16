@@ -1,0 +1,23 @@
+<h1 id="styling-in-pandoc-markdown">Styling in (pandoc) Markdown</h1>
+<p>If you want to add styles to markdown and your in pandoc you have to
+use the <code>&lt;style&gt;</code> or the
+<code>&lt;link rel="stylesheet" href="{x}.css"&gt;</code> where x is the
+file's name.</p>
+<p>Example:</p>
+<div class="sourceCode" id="cb1"><pre
+class="sourceCode markdown"><code class="sourceCode markdown"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="dt">&lt;</span><span class="kw">style</span><span class="dt">&gt;</span></span>
+<span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a><span class="fu">.red</span> {</span>
+<span id="cb1-3"><a href="#cb1-3" aria-hidden="true" tabindex="-1"></a>  <span class="kw">color</span>: <span class="cn">red</span><span class="op">;</span></span>
+<span id="cb1-4"><a href="#cb1-4" aria-hidden="true" tabindex="-1"></a>}</span>
+<span id="cb1-5"><a href="#cb1-5" aria-hidden="true" tabindex="-1"></a><span class="dt">&lt;/</span><span class="kw">style</span><span class="dt">&gt;</span></span>
+<span id="cb1-6"><a href="#cb1-6" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-7"><a href="#cb1-7" aria-hidden="true" tabindex="-1"></a>This text is red {.red}</span></code></pre></div>
+<p>This will output:</p>
+<style>
+.red {
+  color: red;
+}
+</style>
+<p><span class="red">This text is red</span></p>
+<p><a href="Entry1.md">Previous Page</a> <a href="Entry3.md">Next
+Page</a></p>

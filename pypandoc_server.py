@@ -11,9 +11,6 @@ from glob import glob
 
 for filename in glob("*.md"):
     if not exists(f"build/{filename}.html"):
-        print(f"Converting {filename}")
-        with open(f"build/{filename}.html", "w") as f:
-            pass
         convert_file(
             filename, to="html", format="md", outputfile=f"build/{filename}.html"
         )

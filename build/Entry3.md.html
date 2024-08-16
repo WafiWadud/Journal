@@ -1,0 +1,20 @@
+<h1 id="finding-files-ending-in-a-certain-extension-python">Finding
+files ending in a certain extension (python)</h1>
+<p>Okay, So you’re just making a server just as normal programmers do,
+but then you want to find files with certain extensions. No places you
+seem to search provide an easy way to do this.</p>
+<p>Here is the solution:</p>
+<ul>
+<li>First import the glob module</li>
+</ul>
+<div class="sourceCode" id="cb1"><pre
+class="sourceCode python"><code class="sourceCode python"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> glob</span></code></pre></div>
+<ul>
+<li>Then look for the files you want (i.e .py files)</li>
+</ul>
+<div class="sourceCode" id="cb2"><pre
+class="sourceCode python"><code class="sourceCode python"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> glob</span>
+<span id="cb2-2"><a href="#cb2-2" aria-hidden="true" tabindex="-1"></a>files <span class="op">=</span> glob.glob(<span class="st">&#39;*.py&#39;</span>)</span>
+<span id="cb2-3"><a href="#cb2-3" aria-hidden="true" tabindex="-1"></a><span class="co"># do something with files</span></span></code></pre></div>
+<p><a href="Entry2.md">Previous Page</a> <a href="Entry4.md">Next
+Page</a></p>

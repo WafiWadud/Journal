@@ -1,0 +1,14 @@
+<h1 id="custom-types-in-python">Custom Types in Python</h1>
+<p>Back in python 3.5 there was the <code>NewType</code> type in the
+<code>typing</code> module. Then in python 3.10 &amp; 3.11 there was a
+<code>TypeAlias</code> type in the <code>typing</code> module. TypeAlias
+has been deprecated in 3.12. Instead, we are encouraged to use the
+<code>type</code> keyword. Example: Old:</p>
+<div class="sourceCode" id="cb1"><pre
+class="sourceCode python"><code class="sourceCode python"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="im">from</span> typing <span class="im">import</span> TypeAlias</span>
+<span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a>Point: TypeAlias <span class="op">=</span> <span class="bu">tuple</span>[<span class="bu">int</span>, <span class="bu">int</span>]</span></code></pre></div>
+<p>New:</p>
+<div class="sourceCode" id="cb2"><pre
+class="sourceCode python"><code class="sourceCode python"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true" tabindex="-1"></a><span class="bu">type</span> Point <span class="op">=</span> <span class="bu">tuple</span>[<span class="bu">int</span>, <span class="bu">int</span>]</span></code></pre></div>
+<p><a href="Entry3.md">Previous Page</a> <a href="Entry5.md">Next
+Page</a></p>
