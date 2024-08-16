@@ -1,6 +1,4 @@
-# DISCLAMER & NOTICE {#gradient}
-
----
+# DISCLAMER & NOTICE
 
 <style>
 .red {

@@ -1,6 +1,4 @@
-# Custom Types in Python {#gradient}
-
----
+# Custom Types in Python
 
 Back in python 3.5 there was the `NewType` type in the `typing` module. Then in python 3.10 & 3.11 there was a `TypeAlias` type in the `typing` module. TypeAlias has been deprecated in 3.12. Instead, we are encouraged to use the `type` keyword.
 Example:

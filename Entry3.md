@@ -1,6 +1,4 @@
-# Finding files ending in a certain extension (python) {#gradient}
-
----
+# Finding files ending in a certain extension (python)
 
 Okay, So you're just making a server just as normal programmers do, but then you want to find files with certain extensions. No places you seem to search provide an easy way to do this.
 

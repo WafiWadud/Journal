@@ -1,6 +1,4 @@
-# A new, Better marquee tag {#gradient}
-
----
+# A new, Better marquee tag
 
 The old `<marquee>` tag has practically been eradicated from most browsers. Instead the user should use CSS3 animation. So, i did just that in a small script anyone can embed. To create a marquee, use the `<new-marquee>` tag with this in your code:
 
