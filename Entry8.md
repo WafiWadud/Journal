@@ -1,8 +1,10 @@
 # spinner in node js with no dependencies and examples
 
-So, after what felt like an eternity, an idea struck me - What if i made a spinner using nothing but escape codes?
+So, after what felt like an eternity, an idea struck me -
+What if i made a spinner using nothing but escape codes?
+And so I did.
 
-Well, without further ado, let's hop into the code
+So, without further ado, let's hop, skip and jump straight into the code
 
 ```javascript
 const delay = (ms) => new Promise((resolve) => setTimeout(resolve, ms));
@@ -79,3 +81,5 @@ async function simulateLoading() {
 await interactiveExample();
 await simulateLoading();
 ```
+
+[Previous Page](Entry7.md) [Next Page](Entry9.md)
